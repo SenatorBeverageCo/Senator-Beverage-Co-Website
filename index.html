@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Senator Beverage Co</title>
+  <title>senator beverage Co</title>
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    if (!localStorage.getItem("ageVerified")) {
+      window.location.href = "age-gate.html";
+    }
+  </script>
 </head>
 <body>
-  <h1>Welcome to the future of drinks!</h1>
+  <h1>Welcome to the future of drinks</h1>
   <p>Premium products crafted responsibly.</p>
 </body>
 </html>
