@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px;
+      background-color: #111;
+      color: white;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Age Verification</h1>
+  <p>You must be 21 years or older to enter this site.</p>
+
+  <button onclick="enterSite()">I am 21 or older</button>
+  <button onclick="deny()">I am under 21</button>
+
+  <script>
+    function enterSite() {
+      localStorage.setItem("ageVerified", "true");
+      window.location.href = "index.html";
+    }
+    function deny() {
+      alert("You must be of legal drinking age to access this site.");
+    }
+  </script>
+</body>
+</html>
