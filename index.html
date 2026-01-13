@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Senator beverage Co – Homepage</title>
+  <title>Senator Bevrage Co – Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
@@ -281,4 +281,462 @@
     }
 
     .section-header h2 {
-      font
+      font-size: 1.7rem;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-body {
+      padding: 1.25rem 1.4rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .card-kicker {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    .card-link {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-main);
+      opacity: 0.7;
+    }
+
+    /* Impact / stats */
+    .impact {
+      background: var(--bg-dark);
+      color: var(--white);
+    }
+
+    .impact-inner {
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .impact-inner {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+
+    .impact-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .impact-text {
+      font-size: 0.98rem;
+      color: #d0d0d0;
+      max-width: 32rem;
+      margin-bottom: 2rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stat {
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      padding-left: 1rem;
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #c0c0c0;
+    }
+
+    /* Alternating image/text blocks */
+    .alt-blocks {
+      display: grid;
+      gap: 3rem;
+    }
+
+    .alt-block {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .alt-block {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+
+      .alt-block.reverse {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      }
+
+      .alt-block.reverse .alt-text {
+        order: 1;
+      }
+
+      .alt-block.reverse .alt-media {
+        order: 2;
+      }
+    }
+
+    .alt-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .alt-text p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #050608;
+      color: #d0d0d0;
+      padding: 3rem 0 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-top {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .footer-top {
+        grid-template-columns: 2fr 3fr;
+      }
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-columns {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 720px) {
+      .footer-columns {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .footer-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      margin-bottom: 0.75rem;
+      color: #f0f0f0;
+    }
+
+    .footer-link {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: #b0b0b0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <div class="nav-logo">YOUR BRAND</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#stories">Stories</a>
+        <a href="#impact">Impact</a>
+        <a href="#global">Global</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Use either video or image; comment out the one you don't use -->
+    <!-- <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4" />
+    </video> -->
+    <img src="https://images.pexels.com/photos/5531541/pexels-photo-5531541.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Hero background" class="hero-image" />
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-inner">
+        <div class="hero-kicker">Global brand platform</div>
+        <h1 class="hero-title">Shaping the future of your industry.</h1>
+        <p class="hero-subtitle">
+          A short, powerful statement about what your company does, who you serve, and the impact you create.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary">Discover our story</button>
+          <button class="btn-ghost">View latest news</button>
+        </div>
+      </div>
+      <div class="scroll-indicator">Scroll</div>
+    </div>
+  </section>
+
+  <!-- BRAND / MISSION -->
+  <section id="about">
+    <div class="container two-column">
+      <div>
+        <div class="section-kicker">About us</div>
+        <h2 class="section-title">A legacy built on innovation and partnership.</h2>
+        <p class="section-text">
+          Use this space to introduce your company—your history, your core belief, and what sets you apart.
+          Keep it concise but meaningful, focusing on the value you create for people, communities, or customers.
+        </p>
+        <a href="#" class="link-inline">Learn more <span>→</span></a>
+      </div>
+      <div>
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Team collaboration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES / NEWS -->
+  <section id="stories" class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest stories</h2>
+        <a href="#" class="link-inline">View all news <span>→</span></a>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Story 1" />
+          <div class="card-body">
+            <div class="card-kicker">Sustainability</div>
+            <h3 class="card-title">Building a more resilient supply chain.</h3>
+            <p class="card-text">
+              Share a short summary of a key initiative, project, or announcement that reflects your priorities.
+            </p>
+            <a href="#" class="card-link">Read story</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Story 2" />
+          <div class="card-body">
+            <div class="card-kicker">Innovation</div>
+            <h3 class="card-title">Reimagining experiences through technology.</h3>
+            <p class="card-text">
+              Highlight how you’re using innovation to solve real problems or create new opportunities.
+            </p>
+            <a href="#" class="card-link">Read story</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.pexels.com/photos/3184632/pexels-photo-3184632.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Story 3" />
+          <div class="card-body">
+            <div class="card-kicker">Community</div>
+            <h3 class="card-title">Partnering with communities worldwide.</h3>
+            <p class="card-text">
+              Use this card to show your human side—how you support people, cities, or causes.
+            </p>
+            <a href="#" class="card-link">Read story</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT / PURPOSE -->
+  <section id="impact" class="impact">
+    <div class="container impact-inner">
+      <div>
+        <div class="section-kicker">Our impact</div>
+        <h2 class="impact-title">Creating long‑term value for people and the planet.</h2>
+        <p class="impact-text">
+          This section is where you connect your business to a larger purpose. Talk about sustainability,
+          responsibility, or long‑term commitments. Keep it grounded and specific enough to feel real.
+        </p>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Countries where we operate</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Employees worldwide</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100M</div>
+            <div class="stat-label">Customers served annually</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2030</div>
+            <div class="stat-label">Key sustainability milestones</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Impact" />
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL PRESENCE / ALTERNATING BLOCKS -->
+  <section id="global">
+    <div class="container">
+      <div class="section-kicker">Global presence</div>
+      <h2 class="section-title">Connected across markets, united by purpose.</h2>
+      <p class="section-text">
+        Use this area to talk about your footprint—regions, key markets, or how you adapt locally while staying
+        true to a global vision.
+      </p>
+
+      <div class="alt-blocks">
+        <div class="alt-block">
+          <div class="alt-media">
+            <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Region 1" />
+          </div>
+          <div class="alt-text">
+            <h3 class="alt-title">North America</h3>
+            <p>
+              Describe your presence, partnerships, or focus in this region. You can mention flagship projects,
+              key customers, or strategic priorities.
+            </p>
+            <a href="#" class="link-inline">Explore region <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="alt-block reverse">
+          <div class="alt-media">
+            <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Region 2" />
+          </div>
+          <div class="alt-text">
+            <h3 class="alt-title">Europe & Africa</h3>
+            <p>
+              Another region highlight—focus on how you collaborate with local partners, innovate, or support
+              communities.
+            </p>
+            <a href="#" class="link-inline">Explore region <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">YOUR BRAND</div>
+          <p>
+            A short footer description about your company—who you are, what you stand for, and how to reach you.
+          </p>
+        </div>
+        <div class="footer-columns">
+          <div>
+            <div class="footer-heading">Company</div>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Leadership</a>
+            <a href="#" class="footer-link">Careers</a>
+          </div>
+          <div>
+            <div class="footer-heading">News</div>
+            <a href="#" class="footer-link">Press releases</a>
+            <a href="#" class="footer-link">Stories</a>
+            <a href="#" class="footer-link">Events</a>
+          </div>
+          <div>
+            <div class="footer-heading">Resources</div>
+            <a href="#" class="footer-link">Reports</a>
+            <a href="#" class="footer-link">Policies</a>
+            <a href="#" class="footer-link">FAQ</a>
+          </div>
+          <div>
+            <div class="footer-heading">Connect</div>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+            <a href="#" class="footer-link">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> Your Brand. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
+
