@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Team</title>
+  <meta charset="UTF-8" />
+  <title>Our Team – Senator beverage Co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Reuse your existing CSS -->
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    /* Sticky header override */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #050608; /* match your header color */
+    }
+
+    .page-hero {
+      background: #111;
+      color: white;
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      max-width: 40rem;
+      margin: 0 auto;
+      color: #d0d0d0;
+      font-size: 1rem;
+    }
+
+    .content-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .content-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .content-section p {
+      margin-bottom: 1.2rem;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="logo">Senator Beverage Co</div>
+  <!-- SAME NAVIGATION BAR -->
+  <header>
+    <nav class="nav">
+      <div class="nav-logo">Senator Beverage Co</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+      </div>
+    </nav>
+  </header>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="team.html">Team</a></li></li>
-      <li><a href="news.html">News</a></li></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Meet Our Team</h1>
+    <p>We are a company dedicated to providing you with your necessary protein intake without sacrificing fun</p>
+  </section>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Our Team</h1>
-      <p>Meet the people behind our brand.</p>
-    </div>
+  <!-- MAIN CONTENT -->
+  <section class="content-section">
+    <h2>About This Page</h2>
+    <p>
+      need to fill out
+    </p>
+
+    <p>
+      need to fill out
+    </p>
+
+    <h2>Navigation Consistency</h2>
+    <p>
+      need to fill out
+    </p>
   </section>
 
 </body>
+</html>
